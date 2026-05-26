@@ -1,0 +1,50 @@
+1. Which companies are related to Artificial Intelligence research?
+2. Who developed Transformer architecture?
+3. Which organizations are connected to Geoffrey Hinton?
+4. What technologies are associated with Google?
+5. Which entities are mentioned in ai_research.txt?
+6. What companies are involved in machine learning?
+7. Which AI concepts are connected to healthcare?
+8. What relationships exist between Google and AI research?
+9. Which entities are associated with recommendation systems?
+10. What graph database technologies are mentioned?
+11. Which organizations are connected to Transformer models?
+12. What AI technologies are mentioned in the documents?
+13. Which entities are linked to semantic search?
+14. What companies use graph databases?
+15. Which entities are related to machine learning?
+16. Which concepts are associated with FAISS?
+17. Which organizations are mentioned alongside Neo4j?
+18. What relationships exist between AI and healthcare?
+19. Which entities are connected through semantic retrieval?
+20. Which AI research topics are discussed?
+21. What technologies are related to vector databases?
+22. Which entities are connected to Google research?
+23. Which concepts are associated with Transformer architecture?
+24. Which organizations work on AI systems?
+25. What machine learning concepts are mentioned?
+26. Which entities are related to recommendation engines?
+27. What graph relationships exist in the knowledge graph?
+28. Which AI applications are mentioned?
+29. What organizations are connected to semantic search?
+30. Which technologies are associated with vector indexing?
+31. What entities are related to healthcare AI?
+32. Which concepts are connected to graph traversal?
+33. What organizations use AI technologies?
+34. Which relationships exist between entities in the graph?
+35. What semantic retrieval systems are discussed?
+36. Which concepts are linked to recommendation systems?
+37. What graph database concepts are mentioned?
+38. Which AI organizations are mentioned in the documents?
+39. What entities are associated with graph retrieval?
+40. Which technologies are related to embeddings?
+41. What concepts are associated with FAISS indexing?
+42. Which entities are linked to Neo4j?
+43. What semantic AI applications are discussed?
+44. Which organizations are connected to machine learning?
+45. What graph-based retrieval systems are mentioned?
+46. Which concepts are associated with vector search?
+47. What AI research entities are connected?
+48. Which organizations are linked through semantic relationships?
+49. What entities are associated with GraphRAG?
+50. Which technologies are connected to knowledge graphs?

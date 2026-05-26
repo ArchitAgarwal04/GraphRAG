@@ -1,0 +1,29 @@
+Artificial Intelligence Research Milestones
+
+The field of artificial intelligence was formally founded at the Dartmouth Conference in 1956, 
+organized by John McCarthy, Marvin Minsky, Claude Shannon, and Nathaniel Rochester.
+
+Geoffrey Hinton, Yann LeCun, and Yoshua Bengio received the 2018 Turing Award for their 
+contributions to deep learning. Geoffrey Hinton worked at Google for over a decade before 
+leaving in 2023. Yann LeCun is the Chief AI Scientist at Meta.
+
+Transformer architecture was introduced by researchers at Google Brain in the paper 
+"Attention Is All You Need" published in 2017. Ashish Vaswani, Noam Shazeer, Niki Parmar, 
+and Jakob Uszkoreit were among the authors.
+
+DeepMind was founded by Demis Hassabis, Shane Legg, and Mustafa Suleyman in London in 2010. 
+Google acquired DeepMind in 2014 for approximately 500 million dollars. DeepMind developed 
+AlphaGo which defeated world Go champion Lee Sedol in 2016. AlphaFold, developed by DeepMind, 
+solved the protein folding problem in 2020.
+
+Anthropic was founded in 2021 by Dario Amodei, Daniela Amodei, and other former OpenAI members. 
+Dario Amodei serves as the CEO of Anthropic. Anthropic developed the Claude AI assistant. 
+Anthropic is headquartered in San Francisco, California. Amazon invested $4 billion in Anthropic in 2023.
+
+Hugging Face was founded by Clément Delangue, Julien Chaumond, and Thomas Wolf in 2016 in New York. 
+Hugging Face is known for its Transformers library and the Model Hub platform. Hugging Face raised 
+$235 million in funding in 2023 at a $4.5 billion valuation.
+
+The ImageNet Large Scale Visual Recognition Challenge (ILSVRC) was organized by Fei-Fei Li at 
+Stanford University. AlexNet, developed by Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton 
+at the University of Toronto, won the 2012 ImageNet competition and sparked the deep learning revolution.

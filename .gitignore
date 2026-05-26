@@ -2,7 +2,6 @@
 __pycache__/
 *.py[cod]
 .env
-faiss_index/
 *.log
 .DS_Store
 Thumbs.db
