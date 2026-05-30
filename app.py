@@ -36,7 +36,6 @@ if st.button("Search"):
     with st.spinner("Searching graph..."):
 
         response = llm.invoke(query)
-
         st.chat_message("assistant").write(response.content)
 
 elif "deep research" in query.lower():
@@ -52,17 +51,18 @@ else:
             response = """
             Relevant information retrieved from GraphRAG.
             """
-
 st.subheader("AI Response")
 
 st.success(response)
+entities = 163
+relationships = 174
+documents = 1
+
 col1, col2, col3 = st.columns(3)
 
-col1.metric("Entities", 174)
-col2.metric("Relationships", 44)
-col3.metric("Documents", 2)
-from graph.visualize import create_graph
-import streamlit.components.v1 as components
+col1.metric("Entities", entities)
+col2.metric("Relationships", relationships)
+col3.metric("Documents", documents)
 
 from graph.visualize import create_graph
 import streamlit.components.v1 as components
@@ -93,12 +93,6 @@ with st.sidebar:
         5
     )
 st.subheader("Neo4j Query")
-st.subheader("AI Response")
-
-st.write("""
-Deep research improves cybersecurity evaluations
-by using advanced browsing and testing strategies.
-""")
 
 
 tab1, tab2, tab3 = st.tabs([
