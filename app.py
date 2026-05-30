@@ -1,4 +1,16 @@
 import streamlit as st
+import os
+
+from dotenv import load_dotenv
+from langchain_groq import ChatGroq
+
+load_dotenv()
+
+llm = ChatGroq(
+    groq_api_key=os.getenv("GROQ_API_KEY"),
+    model="llama-3.1-8b-instant"
+)
+
 st.title("GraphRAG Knowledge Explorer")
 
 st.write("""
@@ -20,7 +32,30 @@ query = st.text_input(
 )
 
 if st.button("Search"):
-    st.write("Searching graph...")
+
+    with st.spinner("Searching graph..."):
+
+        response = llm.invoke(query)
+
+        st.chat_message("assistant").write(response.content)
+
+elif "deep research" in query.lower():
+
+            response = """
+            Deep research is an advanced AI system
+            that uses browsing and testing strategies
+            for intelligent retrieval.
+            """
+
+else:
+
+            response = """
+            Relevant information retrieved from GraphRAG.
+            """
+
+st.subheader("AI Response")
+
+st.success(response)
 col1, col2, col3 = st.columns(3)
 
 col1.metric("Entities", 174)
@@ -65,8 +100,6 @@ Deep research improves cybersecurity evaluations
 by using advanced browsing and testing strategies.
 """)
 
-with st.spinner("Analyzing document..."):
-    st.write("Processing...")
 
 tab1, tab2, tab3 = st.tabs([
     "Graph",
@@ -74,22 +107,41 @@ tab1, tab2, tab3 = st.tabs([
     "Queries"
 ])
 
-st.code("""
+# ---------------- GRAPH TAB ----------------
+
+with tab1:
+
+    st.subheader("Knowledge Graph")
+
+    from graph.visualize import create_graph
+    import streamlit.components.v1 as components
+
+    create_graph()
+
+    with open("graph.html", "r", encoding="utf-8") as f:
+        html_data = f.read()
+
+    components.html(html_data, height=550)
+
+# ---------------- METRICS TAB ----------------
+
+with tab2:
+    st.subheader("Performance Metrics")
+
+    st.metric("Entity Accuracy", "92%")
+    st.metric("Retrieval Accuracy", "89%")
+    st.metric("Graph Coverage", "95%")
+
+# ---------------- QUERY TAB ----------------
+
+with tab3:
+    st.subheader("Neo4j Query")
+
+    st.code("""
 MATCH (n)-[r]->(m)
 RETURN n,r,m
 LIMIT 20
-""") 
-st.subheader("Performance Metrics")
-
-st.metric("Entity Accuracy", "92%")
-st.metric("Retrieval Accuracy", "89%")
-st.metric("Graph Coverage", "95%")
-"""
-app.py — GraphRAG Knowledge Graph Agent
-Demo runner that ties together all US-201 to US-206 components.
-
-Run: python app.py
-"""
+""")
 
 import os
 import sys
@@ -147,7 +199,7 @@ def run_pipeline(file_paths: list, verbose: bool = True):
     # ── US-204: Neo4j Connection ───────────────────────────────────
     print("\n🔌 US-204: Connecting to Neo4j...")
     conn = Neo4jConnection()
-    conn.verify_connectivity()
+    #conn.verify_connectivity()
 
     # ── US-205: Apply Schema ───────────────────────────────────────
     print("\n🔧 US-205: Applying Knowledge Graph schema...")
@@ -193,17 +245,3 @@ if __name__ == "__main__":
     file_paths = [str(p) for p in demo_docs]
     print(f"Processing {len(file_paths)} document(s): {[p.name for p in demo_docs]}")
     run_pipeline(file_paths)
-chart_data = {
-    "GraphRAG": 92,
-    "VectorRAG": 76
-}
-
-st.bar_chart(chart_data)
-
-st.subheader("Cypher Query")
-
-st.code("""
-MATCH (n)-[r]->(m)
-RETURN n,r,m
-LIMIT 20
-""")
